@@ -366,6 +366,27 @@
     <script src="./js/jq.js"></script>
     <script src="./js/glo.js"></script>
     <script src="./js/owl.js"></script>
+    <script>
+        document.getElementById('emailPay').value = JSON.parse(localStorage.getItem("userLogin")).email;
+        document.getElementById('emailPay').disabled = true;
+        function checkValueForm(txt, text) {
+            if (txt.value == "") {
+                alert(text);
+                txt.select();
+                return false;
+            }
+            return true;
+        }
+        document.getElementById('btnContinue').onclick = (e) => {
+            e.preventDefault();
+            if (!checkValueForm(document.getElementById('namePay'), "Chưa nhập tên")) return;
+            if (!checkValueForm(document.getElementById('phonePay'), "Chưa nhập số điện thoại")) return;
+            if (!checkValueForm(document.getElementById('cityPay'), "Chưa nhập thành phố")) return;
+            if (!checkValueForm(document.getElementById('addPay'), "Chưa nhập địa chỉ")) return;
+            location.href = "checkout-step2.html";
+        }
+
+    </script>
     
 </body>
 
