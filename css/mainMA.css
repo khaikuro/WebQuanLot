@@ -789,7 +789,7 @@ video {
   font-size: 20px;
 }
 .cms-banner {
-  background: url("/ảnh/dacam.jpg") repeat scroll 0 0;
+  background: url("../ảnh/dacam.jpg") repeat scroll 0 0;
   display: table-cell;
   height: 411px;
   padding: 30px;
